@@ -1,5 +1,7 @@
-public class firstClass {
+public class FirstClass {
     public static void main(String[] args) {
+
+        // Zadanie "Rozbudowa kodu"
 
         Notebook notebook = new Notebook(600, 1000, 2015);
         System.out.println("Weight: " + notebook.weight + "   Price: " + notebook.price + "   Production year: " + notebook.year);
@@ -36,5 +38,21 @@ public class firstClass {
         officeNotebook.checkPrice();
         officeNotebook.checkWeight();
         officeNotebook.discountConditions();
+
+        // Zwracanie danych
+
+        int notebookWeight = officeNotebook.getWeight();
+        System.out.println(notebookWeight);
+
+        // Zadanie "Rok przestępny"
+
+        LeapYear firstTest = new LeapYear(2020);
+        if(firstTest.leapCheck == true){
+            System.out.println("This is a leap year");
+        }else if(firstTest.leapCheck == false){
+            System.out.println("This is not a leap year");
+        }else{
+            System.out.println("Something went wrong!");
+        }
     }
 }

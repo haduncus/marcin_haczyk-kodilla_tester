@@ -1,4 +1,4 @@
-public class Notebook {
+public class Notebook{
 
     int weight;
     int price;
@@ -18,6 +18,10 @@ public class Notebook {
         }else{
             System.out.println("This notebook is expensive");
         }
+    }
+
+    public int getWeight() {
+        return this.weight;
     }
 
     public void checkWeight(){
