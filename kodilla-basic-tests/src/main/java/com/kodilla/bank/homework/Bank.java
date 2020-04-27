@@ -70,20 +70,20 @@ public class Bank {
     }
 
     public double getTotalAverageOfDeposits() {
-        double avgDeposit = (this.cashMachine1.getSumOfDeposits() + this.cashMachine2.getSumOfDeposits() +this.cashMachine3.getSumOfDeposits()) / (this.cashMachine1.getNumberOfDeposits() + this.cashMachine2.getNumberOfDeposits() +this.cashMachine3.getNumberOfDeposits());
-        if (avgDeposit == 0) {
+        double totalSum = this.cashMachine1.getSumOfDeposits() + this.cashMachine2.getSumOfDeposits() +this.cashMachine3.getSumOfDeposits();
+        if (totalSum == 0) {
             return 0;
         } else {
-            return avgDeposit;
+            return totalSum / getTotalNumberOfDeposits();
         }
     }
 
     public double getTotalAverageOfWithdraws() {
-        double avgWithdraw = (this.cashMachine1.getSumOfWithdraws() + this.cashMachine2.getSumOfWithdraws() +this.cashMachine3.getSumOfWithdraws()) / (this.cashMachine1.getNumberOfWithdraws() + this.cashMachine2.getNumberOfWithdraws() +this.cashMachine3.getNumberOfWithdraws());
-        if (avgWithdraw == 0) {
+        double totalSum = this.cashMachine1.getSumOfWithdraws() + this.cashMachine2.getSumOfWithdraws() +this.cashMachine3.getSumOfWithdraws();
+        if (totalSum == 0) {
             return 0;
         } else {
-            return avgWithdraw;
+            return totalSum / getTotalNumberOfWithdraws();
         }
     }
 }
