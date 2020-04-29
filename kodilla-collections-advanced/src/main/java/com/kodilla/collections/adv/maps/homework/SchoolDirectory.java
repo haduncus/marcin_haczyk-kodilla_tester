@@ -15,19 +15,19 @@ public class SchoolDirectory {
         Map<Principal, School> principalSchoolMap = new HashMap<>();
 
         Principal james = new Principal("James H");
-        Principal Kirk = new Principal("Kirk H");
-        Principal Cliff = new Principal("Cliff B");
+        Principal kirk = new Principal("Kirk H");
+        Principal cliff = new Principal("Cliff B");
         Principal lars = new Principal("Lars U");
 
-        School first = new School(23, 25, 24);
-        School second = new School(21, 20, 26);
-        School third = new School(24, 23, 25);
-        School fourth = new School(26, 21, 25);
+        School firstSchool = new School(23, 25, 24);
+        School secondSchool = new School(21, 20, 26);
+        School thirdSchool = new School(24, 23, 25);
+        School fourthSchool = new School(26, 21, 25);
 
-        principalSchoolMap.put(james, first);
-        principalSchoolMap.put(Kirk, second);
-        principalSchoolMap.put(Cliff, third);
-        principalSchoolMap.put(lars, fourth);
+        principalSchoolMap.put(james, firstSchool);
+        principalSchoolMap.put(kirk, secondSchool);
+        principalSchoolMap.put(cliff, thirdSchool);
+        principalSchoolMap.put(lars, fourthSchool);
 
         for (Map.Entry<Principal, School> principalSchoolEntry : principalSchoolMap.entrySet()) {
             System.out.println("Principal: " + principalSchoolEntry.getKey().getName() + ", number of students in 1, 2 and 3 class, respectively: " + principalSchoolEntry.getValue().getNumberOfStudents());
