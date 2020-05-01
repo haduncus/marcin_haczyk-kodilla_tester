@@ -18,5 +18,7 @@ public class BookApplication {
         book.createBook("Harry Potter", "J. K. Rowling");
         book.createBook("Harry Potter", "J. K. Rowling");
         book.createBook("Shining", "Stephen King");
+        book.createBook("Shining", "Stephen King");
+        book.createBook("Shining", "Stephen King");
     }
 }
