@@ -13,16 +13,13 @@ class FlightFinderTestSuite {
     public void testFindFlightsFrom() {
         // gives
         FlightFinder flightFinder = new FlightFinder();
-        List<Flight> flightList = FlightRepository.getFlightTable();
-        flightList.add(new Flight("Neverland", "Rome"));
-        flightList.add(new Flight("Paris", "Neverland"));
-        flightList.add(new Flight("Neverland", "Moscow"));
         // when
-        List<Flight> result = flightFinder.findFlightsFrom("Neverland");                              // zwracana jest pusta lista, tak jakby metoda ta wywoływana była, nie widząc nowo dodanych elementów
+        List<Flight> result = flightFinder.findFlightsFrom("Warsaw");
         // then
         List<Flight> expectedList = new ArrayList<>();
-        expectedList.add(new Flight("Neverland", "Rome"));
-        expectedList.add(new Flight("Neverland", "Moscow"));
+        expectedList.add(new Flight("Warsaw", "London"));
+        expectedList.add(new Flight("Warsaw", "Frankfurt"));
+        expectedList.add(new Flight("Warsaw", "Paris"));
         assertEquals(expectedList, result);
     }
 
@@ -30,16 +27,12 @@ class FlightFinderTestSuite {
     public void testFindFlightsTo() {
         // gives
         FlightFinder flightFinder = new FlightFinder();
-        List<Flight> flightList = FlightRepository.getFlightTable();
-        flightList.add(new Flight("London", "Neverland"));
-        flightList.add(new Flight("Neverland", "Frankfurt"));
-        flightList.add(new Flight("Warsaw", "Neverland"));
         // when
-        List<Flight> result = flightFinder.findFlightsTo("Neverland");                                // zwracana jest pusta lista, tak jakby metoda ta wywoływana była, nie widząc nowo dodanych elementów
+        List<Flight> result = flightFinder.findFlightsTo("London");
         // then
         List<Flight> expectedList = new ArrayList<>();
-        expectedList.add(new Flight("London", "Neverland"));
-        expectedList.add(new Flight("Warsaw", "Neverland"));
+        expectedList.add(new Flight("Warsaw", "London"));
+        expectedList.add(new Flight("Madrid", "London"));
         assertEquals(expectedList, result);
     }
 }

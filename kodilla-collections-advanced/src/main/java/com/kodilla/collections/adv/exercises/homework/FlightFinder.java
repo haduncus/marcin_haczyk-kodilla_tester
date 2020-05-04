@@ -1,13 +1,3 @@
-/*  Stwórz nowy pakietcom.kodilla.collections.adv.exercises.homework, a w nim:
-    1. Klasę Flight z polami String departure oraz String arrival.
-    2. Klasę FlightRepository z metodą statyczną getFlightsTable(), która zwraca listę lotów obsługiwanych przez
-    dane lotnisko (wypełnij tę listę przykładowymi lotami).
-    3. Klasę FlightFinder z metodami:
-    public List<Flight> findFlightsFrom(String departure)
-    public List<Flight> findFlightsTo(String arrival)
-    Metody te będą wyszukiwały loty do oraz z podanego miasta.
-    Napisz testy do klasy FlightFinder.*/
-
 package com.kodilla.collections.adv.exercises.homework;
 
 import java.util.ArrayList;
