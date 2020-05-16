@@ -27,7 +27,7 @@ public class GamblingMachine {
             throw new InvalidNumbersException();
         }
 
-        if (numbers.stream().anyMatch(number -> number > 50)) {                                                         // Add max value condition to be fair play;)
+        if (numbers.stream().anyMatch(number -> number > 49)) {                                                         // Add max value condition to be fair play;)
             throw new InvalidNumbersException();
         }
     }
