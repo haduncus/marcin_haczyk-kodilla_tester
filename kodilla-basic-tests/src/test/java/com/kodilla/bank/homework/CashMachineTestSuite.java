@@ -4,78 +4,35 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CashMachineTestSuite {
 
-    @Test
+    /*@Test
     public void shouldHaveZeroLength() {
-        CashMachine cashMachine = new CashMachine();
+        CashMachine cashMachine = new CashMachine("no1");
 
-        int[] values = cashMachine.getOperations();
-        assertEquals(0, values.length);
-    }
+        int[] depositArr = cashMachine.getDepositArr();
+        assertEquals(0, depositArr.length);
+
+        int[] withdrawArr = cashMachine.getWithdrawArr();
+        assertEquals(0, withdrawArr.length);
+    }*/
 
     @Test
     public void shouldAddTwoElementsToArray() {
-        CashMachine cashMachine = new CashMachine();
-        cashMachine.addOperation(50);
-        cashMachine.addOperation(-25);
+        CashMachine cashMachine = new CashMachine("no1");
 
-        int[] values = cashMachine.getOperations();
-        assertEquals(2, values.length);
-        assertEquals(50, values[0]);
-        assertEquals(-25, values[1]);
-    }
+        cashMachine.addDeposit(200);
+        cashMachine.addDeposit(300);
 
-    @Test
-    public void shouldCalculateBalance() {
-        CashMachine cashMachine = new CashMachine();
-        cashMachine.addOperation(230);
-        cashMachine.addOperation(100);
-        cashMachine.addOperation(-70);
+        int[] depositArr = cashMachine.getDepositArr();
+        assertEquals(2, depositArr.length);
+        assertEquals(200, depositArr[0]);
+        assertEquals(300, depositArr[1]);
 
-        int balance = cashMachine.getBalance();
-        assertEquals(260, balance);
-    }
+        cashMachine.addWithdraw(500);
+        cashMachine.addWithdraw(100);
 
-    @Test
-    public void shouldReturnNumberOfDeposits() {
-        CashMachine cashMachine = new CashMachine();
-        cashMachine.addOperation(230);
-        cashMachine.addOperation(210);
-        cashMachine.addOperation(-70);
-
-        int deposits = cashMachine.getNumberOfDeposits();
-        assertEquals(2, deposits);
-    }
-
-    @Test
-    public void shouldReturnNumberOfWithdraws() {
-        CashMachine cashMachine = new CashMachine();
-        cashMachine.addOperation(230);
-        cashMachine.addOperation(-70);
-        cashMachine.addOperation(-90);
-
-        int withdraws = cashMachine.getNumberOfWithdraws();
-        assertEquals(2, withdraws);
-    }
-
-    @Test
-    public void shouldCalculateAverageOfDeposits() {
-        CashMachine cashMachine = new CashMachine();
-        cashMachine.addOperation(230);
-        cashMachine.addOperation(210);
-        cashMachine.addOperation(-70);
-
-        double avgDeposits = cashMachine.getAverageOfDeposits();
-        assertEquals(220,avgDeposits);
-    }
-
-    @Test
-    public void shouldCalculateAverageOfWithdraws() {
-        CashMachine cashMachine = new CashMachine();
-        cashMachine.addOperation(230);
-        cashMachine.addOperation(-90);
-        cashMachine.addOperation(-70);
-
-        double avgWithdraws = cashMachine.getAverageOfWithdraws();
-        assertEquals(-80,avgWithdraws);
+        int[] withdrawArr = cashMachine.getWithdrawArr();
+        assertEquals(2, withdrawArr.length);
+        assertEquals(500, withdrawArr[0]);
+        assertEquals(100, withdrawArr[1]);
     }
 }
