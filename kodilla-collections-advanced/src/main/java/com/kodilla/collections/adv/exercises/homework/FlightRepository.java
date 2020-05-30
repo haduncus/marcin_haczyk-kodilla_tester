@@ -22,6 +22,7 @@ public class FlightRepository {
         flightList.add(new Flight("Paris", "Moscow"));
         flightList.add(new Flight("Rome", "Madrid"));
         flightList.add(new Flight("Paris", "Rome"));
+        flightList.add(new Flight("Moscow", "Rome"));
         return flightList;
     }
 }
