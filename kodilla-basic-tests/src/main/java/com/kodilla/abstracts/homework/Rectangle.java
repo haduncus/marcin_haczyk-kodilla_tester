@@ -10,7 +10,7 @@ public class Rectangle extends Shape {
         System.out.println(super.getBaseLength()* super.getHeight());
     }
     @Override
-    public void getCircuit() {
+    public void getCircumference() {
         System.out.println(2 * (super.getBaseLength() + super.getHeight()));
     }
 }

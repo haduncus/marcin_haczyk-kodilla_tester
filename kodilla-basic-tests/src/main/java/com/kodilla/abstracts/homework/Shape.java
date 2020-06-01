@@ -16,5 +16,5 @@ public abstract class Shape {
         return height;
     }
     public abstract void getSurfaceArea();
-    public abstract void getCircuit();
+    public abstract void getCircumference();
 }

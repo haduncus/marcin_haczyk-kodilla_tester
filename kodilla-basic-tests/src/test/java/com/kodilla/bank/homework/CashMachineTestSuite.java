@@ -1,10 +1,13 @@
+/*
 package com.kodilla.bank.homework;
+import org.junit.Test;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CashMachineTestSuite {
 
-    /*@Test
+    */
+/*@Test
     public void shouldHaveZeroLength() {
         CashMachine cashMachine = new CashMachine("no1");
 
@@ -13,7 +16,8 @@ public class CashMachineTestSuite {
 
         int[] withdrawArr = cashMachine.getWithdrawArr();
         assertEquals(0, withdrawArr.length);
-    }*/
+    }*//*
+
 
     @Test
     public void shouldAddTwoElementsToArray() {
@@ -35,4 +39,4 @@ public class CashMachineTestSuite {
         assertEquals(500, withdrawArr[0]);
         assertEquals(100, withdrawArr[1]);
     }
-}
+}*/

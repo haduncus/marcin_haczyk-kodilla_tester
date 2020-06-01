@@ -12,15 +12,15 @@ public class Application {
 
         Rectangle rectangle = new Rectangle();
         rectangle.getSurfaceArea();
-        rectangle.getCircuit();
+        rectangle.getCircumference();
 
         RectangularTriangle rectangularTriangle = new RectangularTriangle();
         rectangularTriangle.getSurfaceArea();
-        rectangularTriangle.getCircuit();
+        rectangularTriangle.getCircumference();
 
         Square square = new Square();
         square.getSurfaceArea();
-        square.getCircuit();
+        square.getCircumference();
 
 
     }

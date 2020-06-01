@@ -9,7 +9,7 @@ public class RectangularTriangle extends Shape {
         System.out.println((super.getBaseLength() * super.getHeight()) / 2);
     }
     @Override
-    public void getCircuit() {
+    public void getCircumference() {
         System.out.println(Math.hypot(super.getHeight(),super.getBaseLength()) + super.getBaseLength() + super.getHeight());
     }
 }

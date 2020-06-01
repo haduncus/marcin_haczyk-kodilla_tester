@@ -15,7 +15,7 @@ public class Square extends Shape {
     }
 
     @Override
-    public void getCircuit() {
+    public void getCircumference() {
         if (getBaseLength() != getHeight()) {
             System.out.println("Height have to be equal to the base length!");
         } else {
