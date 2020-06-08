@@ -12,7 +12,7 @@ public class FirstClass {
 
         // Zadanie "Rok przestępny"
 
-        LeapYear firstTest = new LeapYear(1581); //dopisać warunek brzegowy dolny
+        LeapYear firstTest = new LeapYear(1581);
         System.out.print(firstTest.yearNo + ": ");
         if (firstTest.yearNo >= 1582) {
             if (firstTest.leapCheck) {
@@ -20,17 +20,16 @@ public class FirstClass {
             } else {
                 System.out.println("This is not a leap year");
             }
-        }else{
+        } else {
             System.out.println("Date lower than 1582 is prohibited");
         }
 
         // Zadanie: ćwiczymy pętle (2.)
 
         RandomNumbers randomNumber = new RandomNumbers();
-        int result = randomNumber.countRandomNumbers();
+        int result = RandomNumbers.countRandomNumbers();
         System.out.println();
         System.out.println(result);
-
     }
 
     private static void printNotebookData(int i, int i2, int i3, int i4) {
