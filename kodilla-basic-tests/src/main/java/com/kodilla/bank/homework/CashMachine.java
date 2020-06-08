@@ -3,7 +3,7 @@ package com.kodilla.bank.homework;
 public class CashMachine {
 
     private int[] operations;
-    private int size = 0;                                                                                                   // nie ma różnicy w ilości pozytywnie zakończonych tesów z i bez "static"
+    private int size = 0;
 
     public CashMachine() {
         this.operations = new int[0];

@@ -1,82 +1,90 @@
-/*
 package com.kodilla.bank.homework;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
-public class CashMachineTestSuite {
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+public class BankTestSuite {
 
     @Test
-    public void shouldHaveZeroLength() {
-        CashMachine cashMachine = new CashMachine();
-        int[] values = cashMachine.getOperations();
-        Assert.assertEquals(0, values.length);
+    public void shouldReturnZeroWithoutOperations() {
+        Bank bank = new Bank();
+
+        int noOperations = bank.getTotalBalance();
+        assertEquals(0, noOperations);
     }
 
     @Test
-    public void shouldAddTwoElementsToArray() {
-        CashMachine cashMachine = new CashMachine();
-        cashMachine.addOperation(50);
-        cashMachine.addOperation(-25);
+    public void shouldReturnZeroIfOperationsAreNotDividedBy20() {
+        Bank bank = new Bank();
 
-        int[] values = cashMachine.getOperations();
-        Assert.assertEquals(2, values.length);
-        Assert.assertEquals(50, values[0]);
-        Assert.assertEquals(-25, values[1]);
+        bank.addCashMachine1Operation(0);
+        bank.addCashMachine2Operation(185);
+        bank.addCashMachine3Operation(-30);
+
+        int totalBalance = bank.getTotalBalance();
+        assertEquals(0, totalBalance);
     }
 
     @Test
-    public void shouldCalculateBalance() {
-        CashMachine cashMachine = new CashMachine();
-        cashMachine.addOperation(230);
-        cashMachine.addOperation(100);
-        cashMachine.addOperation(-70);
+    public void shouldCalculateTotalBalance() {
+        Bank bank = new Bank();
 
-        int balance = cashMachine.getBalance();
-        Assert.assertEquals(260, balance);
+        bank.addCashMachine1Operation(40);
+        bank.addCashMachine2Operation(-180);
+        bank.addCashMachine3Operation(400);
+
+        int totalBalance = bank.getTotalBalance();
+        assertEquals(260, totalBalance);
     }
 
     @Test
-    public void shouldReturnNumberOfDeposits() {
-        CashMachine cashMachine = new CashMachine();
-        cashMachine.addOperation(230);
-        cashMachine.addOperation(210);
-        cashMachine.addOperation(-70);
+    public void shouldReturnTotalNumberOfDeposits() {
+        Bank bank = new Bank();
 
-        int deposits = cashMachine.getNumberOfDeposits();
-        Assert.assertEquals(2, deposits);
+        bank.addCashMachine1Operation(40);
+        bank.addCashMachine2Operation(-180);
+        bank.addCashMachine3Operation(400);
+
+        int totalNumberOfDeposits = bank.getTotalNumberOfDeposits();
+        assertEquals(2, totalNumberOfDeposits);
     }
 
     @Test
-    public void shouldReturnNumberOfWithdraws() {
-        CashMachine cashMachine = new CashMachine();
-        cashMachine.addOperation(230);
-        cashMachine.addOperation(-70);
-        cashMachine.addOperation(-90);
+    public void shouldReturnTotalNumberOfWithdraws() {
+        Bank bank = new Bank();
 
-        int withdraws = cashMachine.getNumberOfWithdraws();
-        Assert.assertEquals(2, withdraws);
+        bank.addCashMachine1Operation(400);
+        bank.addCashMachine2Operation(-120);
+        bank.addCashMachine3Operation(-240);
+
+        int totalNumberOfWithdraws = bank.getTotalNumberOfWithdraws();
+        assertEquals(2, totalNumberOfWithdraws);
     }
 
     @Test
-    public void shouldCalculateAverageOfDeposits() {
-        CashMachine cashMachine = new CashMachine();
-        cashMachine.addOperation(230);
-        cashMachine.addOperation(210);
-        cashMachine.addOperation(-70);
+    public void shouldCalculateTotalAverageOfDeposits() {
+        Bank bank = new Bank();
 
-        double avgDeposits = cashMachine.getAverageOfDeposits();
-        Assert.assertEquals(220, avgDeposits);
+        bank.addCashMachine1Operation(200);
+        bank.addCashMachine2Operation(300);
+        bank.addCashMachine2Operation(200);
+        bank.addCashMachine3Operation(-60);
+
+        double totalAverageOfDeposits = bank.getTotalAverageOfDeposits();
+        assertEquals(233.33, totalAverageOfDeposits, 0.01);
     }
 
     @Test
-    public void shouldCalculateAverageOfWithdraws() {
-        CashMachine cashMachine = new CashMachine();
-        cashMachine.addOperation(230);
-        cashMachine.addOperation(-90);
-        cashMachine.addOperation(-70);
+    public void shouldCalculateTotalAverageOfWithdraws() {
+        Bank bank = new Bank();
 
-        double avgWithdraws = cashMachine.getAverageOfWithdraws();
-        Assert.assertEquals(-80, avgWithdraws);
+        bank.addCashMachine1Operation(200);
+        bank.addCashMachine2Operation(-200);
+        bank.addCashMachine2Operation(-260);
+        bank.addCashMachine3Operation(-100);
+
+        double totalAverageOfWithdraws = bank.getTotalAverageOfWithdraws();
+        assertEquals(-186.67, totalAverageOfWithdraws, 0.01);
     }
-}*/
+}
