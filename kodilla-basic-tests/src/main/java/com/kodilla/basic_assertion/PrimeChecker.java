@@ -15,7 +15,6 @@ public class PrimeChecker {
                 return false;
             }
         }
-
         return true;
     }
 

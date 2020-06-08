@@ -15,23 +15,23 @@ public class Application {
         boolean correctSum = ResultChecker.assertEquals(13, sumResult);
         if (correctSum) {
             System.out.println("Metoda sum działa poprawnie dla liczb " + a + " i " + b);
-        }else {
+        } else {
             System.out.println("Metoda sum nie działa poprawnie dla liczb " + a + " i " + b);
         }
 
         // subtract test
         boolean correctSubtract = ResultChecker.assertEquals(-3, subtractResult);
-        if(correctSubtract) {
+        if (correctSubtract) {
             System.out.println("Metoda substract działa poprawnie dla liczb " + a + " i " + b);
-        }else {
+        } else {
             System.out.println("Metoda subtract nie działa poprawnie dla liczb " + a + " i " + b);
         }
 
         // power test
         boolean correctPower = ResultChecker.assertEquals(25, powerResult);
-        if(correctPower) {
+        if (correctPower) {
             System.out.println("Metoda power działa poprawnie dla liczby " + a);
-        }else {
+        } else {
             System.out.println("Metoda power nie działa poprawnie dla liczby " + a);
         }
     }
