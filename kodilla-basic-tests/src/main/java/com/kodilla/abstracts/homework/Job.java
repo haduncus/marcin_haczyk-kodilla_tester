@@ -19,7 +19,6 @@ public abstract class Job {
     }
 
     public abstract void giveSalary();
+
     public abstract void giveResponsibilities();
-
 }
-

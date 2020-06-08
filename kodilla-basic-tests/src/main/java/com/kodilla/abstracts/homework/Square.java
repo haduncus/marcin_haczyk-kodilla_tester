@@ -2,7 +2,7 @@ package com.kodilla.abstracts.homework;
 
 public class Square extends Shape {
     public Square() {
-        super(5,5);
+        super(5, 5);
     }
 
     @Override

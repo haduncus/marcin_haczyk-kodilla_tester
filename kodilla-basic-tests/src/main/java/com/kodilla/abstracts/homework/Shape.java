@@ -9,12 +9,16 @@ public abstract class Shape {
         this.baseLength = baseLength;
         this.height = height;
     }
+
     public int getBaseLength() {
         return baseLength;
     }
+
     public int getHeight() {
         return height;
     }
+
     public abstract void getSurfaceArea();
+
     public abstract void getCircumference();
 }

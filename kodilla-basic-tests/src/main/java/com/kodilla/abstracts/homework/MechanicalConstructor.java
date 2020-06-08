@@ -3,7 +3,7 @@ package com.kodilla.abstracts.homework;
 public class MechanicalConstructor extends Job {
 
     public MechanicalConstructor() {
-        super(4500, "Projektowanie zaawansowanych technicznie maszyn – wyważarek i systemów diagnostycznych");
+        super(4500, "Projektowanie zaawansowanych technicznie maszyn – wyważarek i systemów diagnostycznych.");
     }
 
     @Override
