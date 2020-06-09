@@ -1,19 +1,26 @@
 package com.kodilla.optional.homework;
 
+import java.util.Optional;
+
 public class Student {
-    String name;
-    Teacher teacher;
+    private String studentName;
+    private Optional<String> teacher;
 
-    public Student(String name, Teacher teacher) {
-        this.name = name;
-        this.teacher = teacher;
+    public Student(String studentName, Teacher teacher) {
+        this.studentName = studentName;
+        this.teacher = Optional.ofNullable(teacher.getName());
     }
 
-    public String getName() {
-        return name;
+    public Student(String studentName) {
+        this.studentName = studentName;
+        this.teacher = Optional.of("undefined");
     }
 
-    public Teacher getTeacher() {
-        return teacher;
+    public String getStudentName() {
+        return studentName;
+    }
+
+    public String getTeacher() {
+        return String.valueOf(teacher);
     }
 }
